@@ -26,7 +26,7 @@ To set up the project locally, follow these steps:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/mailer-scheduling-app.git
+   git clone https://github.com/Neeraj-2311/mail-automation-assignment.git
    ```
 
 2. **Navigate to project directory:**
