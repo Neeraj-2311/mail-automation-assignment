@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Mailer Scheduling Application
 
-## Getting Started
+This project is a web-based application designed to facilitate the scheduling of mailers. It allows users to select mailers and recipient lists, specify a date and time for sending, and manage scheduled mailings efficiently.
 
-First, run the development server:
+## LIVE: https://mail-automation-neeraj-demtech.netlify.app/
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Table of Contents
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* [Features](#features)
+* [Installation](#installation)
+* [Usage](#usage)
+* [API Endpoints](#api-endpoints)
+* [Acknowledgements](#acknowledgements)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+* **Mailer Selection:** Choose from a list of available mailers fetched dynamically from the server.
+* **Recipient List Selection:** Select recipient lists dynamically fetched from the server.
+* **Scheduling:** Specify the date and time for sending the mailer.
+* **Responsive Design:** The scheduling form adapts to different screen sizes for optimal usability.
+* **Modal Interface:** The scheduling form is presented in a modal that can be triggered based on URL hash.
 
-## Learn More
+## Installation
 
-To learn more about Next.js, take a look at the following resources:
+To set up the project locally, follow these steps:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/mailer-scheduling-app.git
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. **Navigate to project directory:**
+   ```bash
+   cd mailer-scheduling-app
+   ```
 
-## Deploy on Vercel
+3. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+These commands will set up the project on your local machine.
+
+## Usage
+
+After installation, you can use the application as follows:
+
+1. Access the application: Open your browser and navigate to http://localhost:3000
+2. Open the scheduling modal: Click on "New Schedule" button it will redirect you to http://localhost:3000/#create-schedule to open the scheduling modal automatically
+3. Schedule a mailer:
+   * Select a mailer from the dropdown
+   * Select a recipient list from the dropdown
+   * Choose the desired date and time
+   * Click the "Schedule Mail" button to submit
+
+## API Endpoints
+
+The application interacts with the following API endpoints:
+
+* `GET /api/get-mailers`: Fetches the list of available mailers
+* `GET /api/get-lists`: Fetches the list of recipient lists
+* `POST /api/schedule-mail`: Submits the scheduling information to the server
+
+## Acknowledgements
+
+* Next.js - The React framework used
+* Tailwind CSS - For styling the application
